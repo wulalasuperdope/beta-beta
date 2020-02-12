@@ -11,10 +11,10 @@ const Route = db.define('route', {
   holdColor: {
     type: STRING
   },
-  gymName: {
+  wallLocation: {
     type: STRING
   },
-  location: {
+  wallDirection: {
     type: STRING
   },
   imageUrl: {
