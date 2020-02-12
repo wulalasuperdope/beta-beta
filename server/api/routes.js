@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const { Route, Video } = require('../db');
 
-router.get('/', (req, res, next) => {
-  Route.findAll()
-    .then(() => res.status(200).send())
-    .next(err);
+router.get('/', async (req, res, next) => {
+  try {
+    let allRoutes = await Route.findAll();
+    res.status(200).send(allRoutes);
+  } catch (err) {
+    next(err);
+  }
 });
 
 router.get('/:routeId', (req, res, next) => {
