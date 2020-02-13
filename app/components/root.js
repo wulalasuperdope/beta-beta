@@ -8,6 +8,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import AllGyms from './AllGyms';
+import Navigation from './Navigation';
 
 class Root extends React.Component {
   componentDidMount() {}
@@ -16,10 +17,7 @@ class Root extends React.Component {
     return (
       <Router>
         <div>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/gyms">Gyms</Link>
-          </nav>
+          <Navigation />
           <main>
             <h1>Welcome to the Beta Beta</h1>
             <h3>
