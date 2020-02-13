@@ -10,6 +10,10 @@ const Gym = db.define('gym', {
   imageUrl: {
     type: STRING,
     defaultValue: 'No Image'
+  },
+  mapUrl: {
+    type: STRING,
+    defaultValue: 'No Map'
   }
 });
 

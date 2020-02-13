@@ -3,7 +3,7 @@ const { Route, Video, Gym } = require('./server/db');
 const seed = async () => {
   const gyms = [
     {
-      name: 'GV'
+      name: 'the Gravity Vault - Hoboken'
     }
   ];
 

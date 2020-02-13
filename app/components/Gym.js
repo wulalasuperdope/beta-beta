@@ -16,5 +16,4 @@ class Gym extends React.Component {
   }
 }
 
-const mapState = ({ singleGym }) => ({ singleGym });
-export default connect(mapState, null)(Gym);
+export default connect(null, null)(Gym);

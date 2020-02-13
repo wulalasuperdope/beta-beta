@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
 import { fetchGyms } from '../redux/thunks/GymThunks';
@@ -11,11 +10,10 @@ class AllGyms extends React.Component {
   }
 
   render() {
-    console.log('calling AllGyms render');
     const { gyms } = this.props;
-    console.log(gyms);
+
     return (
-      <div className="gym-page">
+      <div className="all-gyms-page">
         <ListGroup className="gym-list">
           {gyms.map(gym => (
             <ListGroup.Item key={gym.id}>

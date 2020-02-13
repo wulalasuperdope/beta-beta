@@ -13,9 +13,14 @@ export function fetchGyms() {
 
 export function fetchGym(gymId) {
   return function thunk(dispatch) {
+    console.log('calling fetchGym thunk');
     return axios
       .get(`/api/gyms/${gymId}`)
-      .then(res => dispatch(setGym(res.data)))
+      .then(res => {
+        console.log('gym fetched');
+        console.log(res.data);
+        dispatch(setGym(res.data));
+      })
       .catch(e => console.log(e));
   };
 }
