@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
 import { fetchGyms } from '../redux/thunks/GymThunks';
+import Gym from './Gym';
 
 class AllGyms extends React.Component {
   componentDidMount() {
@@ -16,10 +17,11 @@ class AllGyms extends React.Component {
     return (
       <div className="gym-page">
         <ListGroup className="gym-list">
-          Gyms list
-          {/* gyms.map(gym => (
-            <ListGroup.Item key={gym.id}>{gym.name}</ListGroup.Item>
-          )) */}
+          {gyms.map(gym => (
+            <ListGroup.Item key={gym.id}>
+              <Gym key={gym.id} gym={gym} />
+            </ListGroup.Item>
+          ))}
         </ListGroup>
       </div>
     );

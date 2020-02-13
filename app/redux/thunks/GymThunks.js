@@ -10,3 +10,12 @@ export function fetchGyms() {
       .catch(e => console.log(e));
   };
 }
+
+export function fetchGym(gymId) {
+  return function thunk(dispatch) {
+    return axios
+      .get(`/api/gyms/${gymId}`)
+      .then(res => dispatch(setGym(res.data)))
+      .catch(e => console.log(e));
+  };
+}
