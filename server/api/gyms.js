@@ -11,7 +11,7 @@ router.get('/', async (req, res, next) => {
 });
 
 router.get('/:gymId', (req, res, next) => {
-  Gym.findAll({
+  Gym.findOne({
     where: { id: req.params.gymId },
     include: [{ model: Route }]
   })

@@ -9,7 +9,10 @@ export const gyms = (state = [], action) => {
   }
 };
 
-export const singleGym = (state = {}, action) => {
+export const singleGym = (
+  state = { name: '', iamgeUrl: '', mapUrl: '', routes: [] },
+  action
+) => {
   switch (action.type) {
     case SET_GYM:
       return action.gym;

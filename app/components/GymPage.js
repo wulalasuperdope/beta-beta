@@ -5,12 +5,9 @@ import { fetchGym } from '../redux/thunks/GymThunks';
 
 class GymPage extends React.Component {
   componentDidMount() {
-    console.log('calling componentDidMount in GymPage');
     this.props.fetchGym(this.props.match.params.gymId);
   }
   render() {
-    console.log('calling Gym Page render');
-    console.log(this.props.singleGym);
     const { name, mapUrl, routes } = this.props.singleGym;
     if (name && !routes.length) {
       return (
@@ -27,7 +24,13 @@ class GymPage extends React.Component {
           <img className="gym-map" src={mapUrl} />
           <ListGroup className="routes-list">
             {routes.map(route => (
-              <ListGroup.Item key={route.id}>{route.grade}</ListGroup.Item>
+              <ListGroup.Item key={route.id}>
+                <div>
+                  <img className="route-image" src={route.imageUrl} />
+                  <div>Grade: {route.grade}</div>
+                  <div>Color: {route.holdColor}</div>
+                </div>
+              </ListGroup.Item>
             ))}
           </ListGroup>
         </div>
