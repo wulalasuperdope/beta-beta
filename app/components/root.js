@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect
 } from 'react-router-dom';
+import AllGyms from './AllGyms';
 
 class Root extends React.Component {
   componentDidMount() {}
@@ -16,7 +18,7 @@ class Root extends React.Component {
         <div>
           <nav>
             <Link to="/">Home</Link>
-            <Link to="/routes">Routes</Link>
+            <Link to="/gyms">Gyms</Link>
           </nav>
           <main>
             <h1>Welcome to the Beta Beta</h1>
@@ -26,8 +28,8 @@ class Root extends React.Component {
             </h3>
           </main>
           <Switch>
-            <Route path="/routes" component={AllRoutes} />
-            <Route path="/routes/:routeId" component={SingleRoute} />
+            <Route exact path="/gyms" component={AllGyms} />
+            {/* <Route path="/gyms/:gymId" component={SingleGym} /> */}
             <Redirect to="/" />
           </Switch>
         </div>

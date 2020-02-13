@@ -4,7 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
 import axios from 'axios';
 
-// import rootReducer from './redux/index';
+import rootReducer from './redux/index';
 
 const middleware = [
   thunkMiddleware.withExtraArgument({ axios }),
@@ -12,6 +12,6 @@ const middleware = [
 ];
 
 export default createStore(
-  //   rootReducer,
+  rootReducer,
   composeWithDevTools(applyMiddleware(...middleware))
 );
