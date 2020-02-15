@@ -26,7 +26,10 @@ class GymPage extends React.Component {
       return (
         <div className="single-gym-page">
           <h3 className="gym-name">{name}</h3>
-          <img className="gym-map" src={mapUrl} />
+          <img
+            className="gym-map"
+            src="/Users/Cissy/Documents/Cohort_Junior/stackathon/sources/HBKN_Route_Setting_Map_Completed_For_Website.png"
+          />
           <ListGroup className="routes-list">
             {routes.map(route => (
               <ListGroup.Item key={route.id}>

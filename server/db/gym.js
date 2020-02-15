@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
-const image = require('./attachments');
 
 const { STRING } = Sequelize;
 
