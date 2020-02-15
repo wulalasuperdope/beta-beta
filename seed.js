@@ -40,10 +40,12 @@ const seed = async () => {
 
   const videos = [
     {
+      name: 'beta #1',
       videoUrl: 'https://youtu.be/cgBhw0htQuA',
       routeId: 1
     },
     {
+      name: 'beta #1',
       videoUrl: 'https://youtu.be/y0kZQZyWZOY',
       routeId: 2
     }

@@ -28,12 +28,12 @@ router.get('/:gymId/:routeId', (req, res, next) => {
     .catch(e => next(e));
 });
 
-router.get('/:gymId/:routeId/:videoId', async (req, res, next) => {
-  Video.findOne({
-    where: { id: req.params.videoId }
-  })
-    .then(selectedVideo => res.status(200).send(selectedVideo))
-    .catch(e => next(e));
-});
+// router.get('/:gymId/:routeId/:videoId', async (req, res, next) => {
+//   Video.findOne({
+//     where: { id: req.params.videoId }
+//   })
+//     .then(selectedVideo => res.status(200).send(selectedVideo))
+//     .catch(e => next(e));
+// });
 
 module.exports = router;

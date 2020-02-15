@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { fetchGym } from '../redux/thunks/GymThunks';
+import RoutePage from './RoutePage';
 
 class GymPage extends React.Component {
   componentDidMount() {
     this.props.fetchGym(this.props.match.params.gymId);
   }
   render() {
-    const { name, mapUrl, routes } = this.props.singleGym;
+    const { id, name, mapUrl, routes } = this.props.singleGym;
     if (name && !routes.length) {
       return (
         <div className="single-gym-page">
@@ -25,11 +27,10 @@ class GymPage extends React.Component {
           <ListGroup className="routes-list">
             {routes.map(route => (
               <ListGroup.Item key={route.id}>
-                <div>
-                  <img className="route-image" src={route.imageUrl} />
-                  <div>Grade: {route.grade}</div>
-                  <div>Color: {route.holdColor}</div>
-                </div>
+                <div>Grade: {route.grade}</div>
+                <Link to={`/gyms/${id}/${route.id}`}>
+                  Color: {route.holdColor}
+                </Link>
               </ListGroup.Item>
             ))}
           </ListGroup>

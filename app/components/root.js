@@ -10,6 +10,7 @@ import AllGyms from './AllGyms';
 import Navigation from './Navigation';
 import Home from './Home';
 import GymPage from './GymPage';
+import RoutePage from './RoutePage';
 
 class Root extends React.Component {
   render() {
@@ -20,7 +21,8 @@ class Root extends React.Component {
           <Switch>
             <Route exact path="/gyms" component={AllGyms} />
             <Route exact path="/" component={Home} />
-            <Route path="/gyms/:gymId" component={GymPage} />
+            <Route exact path="/gyms/:gymId" component={GymPage} />
+            <Route exact path="/gyms/:gymId/:routeId" component={RoutePage} />
             <Redirect to="/" />
           </Switch>
         </div>

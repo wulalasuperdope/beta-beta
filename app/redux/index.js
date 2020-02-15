@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 
-import { gyms, singleGym } from './reducers';
+import { gyms, singleGym, singleRoute } from './reducers';
 
 export default combineReducers({
   gyms,
-  singleGym
+  singleGym,
+  singleRoute
 });

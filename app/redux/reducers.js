@@ -1,4 +1,4 @@
-import { SET_GYMS, SET_GYM } from './constants';
+import { SET_GYMS, SET_GYM, SET_ROUTE } from './constants';
 
 export const gyms = (state = [], action) => {
   switch (action.type) {
@@ -16,6 +16,25 @@ export const singleGym = (
   switch (action.type) {
     case SET_GYM:
       return action.gym;
+    default:
+      return state;
+  }
+};
+
+export const singleRoute = (
+  state = {
+    grade: '',
+    holdColor: '',
+    wallLocation: '',
+    wallDirection: '',
+    imageUrl: '',
+    videos: []
+  },
+  action
+) => {
+  switch (action.type) {
+    case SET_ROUTE:
+      return action.route;
     default:
       return state;
   }
