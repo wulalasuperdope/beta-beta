@@ -7,6 +7,7 @@ const app = express();
 app.use(express.json());
 // static middleware
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../sources')));
 
 app.use('/api', require('./api'));
 // send index.html for any other requests
