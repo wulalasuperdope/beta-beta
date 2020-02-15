@@ -14,9 +14,6 @@ const Route = db.define('route', {
   wallLocation: {
     type: STRING
   },
-  wallDirection: {
-    type: STRING
-  },
   imageUrl: {
     type: STRING,
     defaultValue: 'No Image'

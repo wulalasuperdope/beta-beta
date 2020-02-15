@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
+const image = require('./attachments');
 
 const { STRING } = Sequelize;
 
@@ -11,7 +12,7 @@ const Gym = db.define('gym', {
     type: STRING,
     defaultValue: 'No Image'
   },
-  mapUrl: {
+  map: {
     type: STRING,
     defaultValue: 'No Map'
   }

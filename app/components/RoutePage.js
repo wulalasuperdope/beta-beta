@@ -18,7 +18,6 @@ class RoutePage extends React.Component {
       grade,
       holdColor,
       wallLocation,
-      wallDirection,
       imageUrl,
       videos
     } = this.props.singleRoute;
@@ -26,11 +25,8 @@ class RoutePage extends React.Component {
     return (
       <div className="single-route-page">
         <h3 className="route-name">
-          Grade: {grade}, Color: {holdColor}
+          Grade: {grade}, Color: {holdColor}, Wall Location: {wallLocation}
         </h3>
-        <div className="route-location">
-          Wall Location: {wallLocation}, Wall Direction: {wallDirection}
-        </div>
         <img className="route-image" src={imageUrl} />
         <ListGroup className="videos-list">
           {videos.map(video => (
