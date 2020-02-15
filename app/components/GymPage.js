@@ -10,7 +10,7 @@ class GymPage extends React.Component {
     this.props.fetchGym(this.props.match.params.gymId);
   }
   render() {
-    const { id, name, mapUrl, routes } = this.props.singleGym;
+    const { id, name, map, routes } = this.props.singleGym;
     if (name && !routes.length) {
       return (
         <div className="single-gym-page">
