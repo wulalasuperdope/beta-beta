@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 class Navigation extends React.Component {
   render() {
     return (
-      <Navbar>
-        <Nav>
-          <Nav.Link href="/">Home</Nav.Link>
+      <Navbar bg="dark" variant='dark'>
+        <Nav className='nav'>
+          <Nav.Link href="/">Beta Beta</Nav.Link>
           <Nav.Link href="/gyms">Gyms</Nav.Link>
         </Nav>
       </Navbar>

@@ -6,12 +6,12 @@ class Gym extends React.Component {
   render() {
     const { name, id, imageUrl } = this.props.gym;
     return (
-      <div className="single-gym">
-        <img className="gym-image" src={imageUrl} />
-        <div className="gym-name">
-          <Link to={`/gyms/${id}`}>{name}</Link>
-        </div>
-      </div>
+      <Link to={`/gyms/${id}`} className="single-gym">
+        <img className="gym-image" src={imageUrl} style={{width: '350px', height:'250px'}}/>
+        <p className="gym-name">
+         {name}
+        </p>
+      </Link>
     );
   }
 }

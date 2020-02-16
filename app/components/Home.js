@@ -4,12 +4,8 @@ import { connect } from 'react-redux';
 class Home extends React.Component {
   render() {
     return (
-      <div className="Home-page">
-        <h1>Welcome to the Beta Beta</h1>
-        <h3>
-          Having a problem on sending your project? Check out some beta for the
-          same route.
-        </h3>
+      <div className="Home-page-container" style={{padding: '1px'}}>
+        <h3>Having a problem on sending a climbing route? Check out Beta Beta</h3>
       </div>
     );
   }
