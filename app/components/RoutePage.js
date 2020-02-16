@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 import { fetchRoute } from '../redux/thunks/RouteThunks';
 
 class RoutePage extends React.Component {
@@ -35,7 +36,7 @@ class RoutePage extends React.Component {
           {videos.map(video => (
             <ListGroup.Item key={video.id}>
               <p>{video.name}</p>
-              <img src={video.videoUrl} />
+              <ReactPlayer src={video.videoUrl} playing />
             </ListGroup.Item>
           ))}
         </ListGroup>
