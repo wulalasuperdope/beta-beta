@@ -4,8 +4,8 @@ const seed = async () => {
   const gyms = [
     {
       name: 'the Gravity Vault - Hoboken',
-      image: '/img_GV.jpeg',
-      map: '/HBKN_Route_Setting_Map_Completed_For_Website.png'
+      imageUrl: '/img_GV.jpeg',
+      mapUrl: '/HBKN_Route_Setting_Map_Completed_For_Website.png'
     }
   ];
 
@@ -16,14 +16,14 @@ const seed = async () => {
       grade: 'V4',
       holdColor: 'Pink',
       wallLocation: 'Area D',
-      image: '/IMG_pinkV4.JPG',
+      imageUrl: '/IMG_pinkV4.JPG',
       gymId: 1
     },
     {
       grade: 'V4',
       holdColor: 'White',
       wallLocation: 'Area E',
-      image: '/IMG_whiteV4.JPG',
+      imageUrl: '/IMG_whiteV4.JPG',
       gymId: 1
     }
   ];
@@ -33,12 +33,12 @@ const seed = async () => {
   const videos = [
     {
       name: 'beta #1',
-      // videoUrl: 'https://youtu.be/cgBhw0htQuA',
+      videoUrl: '/video_pinkV4',
       routeId: 1
     },
     {
       name: 'beta #1',
-      // videoUrl: 'https://youtu.be/y0kZQZyWZOY',
+      videoUrl: '/video_whiteV4',
       routeId: 2
     }
   ];

@@ -7,11 +7,11 @@ const Gym = db.define('gym', {
   name: {
     type: STRING
   },
-  image: {
+  imageUrl: {
     type: STRING,
     defaultValue: 'No Image'
   },
-  map: {
+  mapUrl: {
     type: STRING,
     defaultValue: 'No Map'
   }

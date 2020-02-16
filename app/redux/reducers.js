@@ -10,7 +10,7 @@ export const gyms = (state = [], action) => {
 };
 
 export const singleGym = (
-  state = { name: '', iamge: '', map: '', routes: [] },
+  state = { name: '', iamgeUrl: '', mapUrl: '', routes: [] },
   action
 ) => {
   switch (action.type) {
@@ -26,7 +26,7 @@ export const singleRoute = (
     grade: '',
     holdColor: '',
     wallLocation: '',
-    image: '',
+    imageUrl: '',
     videos: []
   },
   action

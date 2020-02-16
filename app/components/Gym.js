@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 
 class Gym extends React.Component {
   render() {
-    const { name, id, image } = this.props.gym;
+    const { name, id, imageUrl } = this.props.gym;
     return (
       <div className="single-gym">
-        <img className="gym-image" src={image} />
+        <img className="gym-image" src={imageUrl} />
         <div className="gym-name">
           <Link to={`/gyms/${id}`}>{name}</Link>
         </div>

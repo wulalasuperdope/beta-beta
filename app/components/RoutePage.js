@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { fetchRoute } from '../redux/thunks/RouteThunks';
 
 class RoutePage extends React.Component {
@@ -18,16 +19,18 @@ class RoutePage extends React.Component {
       grade,
       holdColor,
       wallLocation,
-      image,
-      videos
+      imageUrl,
+      videos,
+      gymId
     } = this.props.singleRoute;
 
     return (
       <div className="single-route-page">
+        <Link to={`/gyms/${gymId}`}>Back</Link>
         <h3 className="route-name">
           Grade: {grade}, Color: {holdColor}, Wall Location: {wallLocation}
         </h3>
-        <img className="route-image" src={image} />
+        <img className="route-image" src={imageUrl} />
         <ListGroup className="videos-list">
           {videos.map(video => (
             <ListGroup.Item key={video.id}>
