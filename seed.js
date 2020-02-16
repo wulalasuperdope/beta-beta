@@ -3,7 +3,9 @@ const { Route, Video, Gym } = require('./server/db');
 const seed = async () => {
   const gyms = [
     {
-      name: 'the Gravity Vault - Hoboken'
+      name: 'the Gravity Vault - Hoboken',
+      image: '/img_GV.jpeg',
+      map: '/HBKN_Route_Setting_Map_Completed_For_Website.png'
     }
   ];
 
@@ -11,27 +13,17 @@ const seed = async () => {
 
   const routes = [
     {
-      grade: 'V10',
+      grade: 'V4',
       holdColor: 'Pink',
-      wallLocation: 'slab',
-      wallDirection: 'west',
-      imageUrl: 'https://images.app.goo.gl/BXbshxESi1VaGm2C7',
+      wallLocation: 'Area D',
+      image: '/IMG_pinkV4.JPG',
       gymId: 1
     },
     {
-      grade: 'V15',
+      grade: 'V4',
       holdColor: 'White',
-      wallLocation: 'roof',
-      wallDirection: 'east',
-      imageUrl: 'https://images.app.goo.gl/eXvxbxixfTdqU2My7',
-      gymId: 1
-    },
-    {
-      grade: 'V8',
-      holdColor: 'Green',
-      wallLocation: 'island',
-      wallDirection: 'north',
-      imageUrl: 'https://images.app.goo.gl/Nwm4GKVaXyJRGu6V7',
+      wallLocation: 'Area E',
+      image: '/IMG_whiteV4.JPG',
       gymId: 1
     }
   ];
@@ -41,12 +33,12 @@ const seed = async () => {
   const videos = [
     {
       name: 'beta #1',
-      videoUrl: 'https://youtu.be/cgBhw0htQuA',
+      // videoUrl: 'https://youtu.be/cgBhw0htQuA',
       routeId: 1
     },
     {
       name: 'beta #1',
-      videoUrl: 'https://youtu.be/y0kZQZyWZOY',
+      // videoUrl: 'https://youtu.be/y0kZQZyWZOY',
       routeId: 2
     }
   ];

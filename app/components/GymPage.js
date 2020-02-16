@@ -15,10 +15,7 @@ class GymPage extends React.Component {
       return (
         <div className="single-gym-page">
           <h3 className="gym-name">{name}</h3>
-          <img
-            className="gym-map"
-            src="/Users/Cissy/Documents/Cohort_Junior/stackathon/sources/HBKN_Route_Setting_Map_Completed_For_Website.png"
-          />
+          <img className="gym-map" src={map} />
           <p>This gym doesn't update any route here.</p>
         </div>
       );
@@ -26,16 +23,13 @@ class GymPage extends React.Component {
       return (
         <div className="single-gym-page">
           <h3 className="gym-name">{name}</h3>
-          <img
-            className="gym-map"
-            src="/Users/Cissy/Documents/Cohort_Junior/stackathon/sources/HBKN_Route_Setting_Map_Completed_For_Website.png"
-          />
+          <img className="gym-map" src={map} />
           <ListGroup className="routes-list">
             {routes.map(route => (
               <ListGroup.Item key={route.id}>
-                <div>Grade: {route.grade}</div>
                 <Link to={`/gyms/${id}/${route.id}`}>
-                  Color: {route.holdColor}
+                  Grade: {route.grade}, Color: {route.holdColor}, Wall Location:{' '}
+                  {route.wallLocation}
                 </Link>
               </ListGroup.Item>
             ))}
