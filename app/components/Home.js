@@ -4,8 +4,14 @@ import { connect } from 'react-redux';
 class Home extends React.Component {
   render() {
     return (
-      <div className="Home-page-container" style={{padding: '1px'}}>
-        <h3>Having a problem on sending a climbing route? Check out Beta Beta</h3>
+      <div className="Home-page-container" style={{ padding: '1px' }}>
+        <img
+          src="/img_home.jpg"
+          style={{
+            height: '100%',
+            width: '100%'
+          }}
+        />
       </div>
     );
   }

@@ -14,7 +14,7 @@ class AllGyms extends React.Component {
 
     return (
       <div className="all-gyms-page">
-        <ListGroup className="gym-list">
+        <ListGroup className="gym-list" horizontal>
           {gyms.map(gym => (
             <ListGroup.Item key={gym.id}>
               <Gym key={gym.id} gym={gym} />

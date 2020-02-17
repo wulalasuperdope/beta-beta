@@ -19,7 +19,6 @@ class RoutePage extends React.Component {
     const {
       grade,
       holdColor,
-      wallLocation,
       imageUrl,
       videos,
       gymId

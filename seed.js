@@ -4,16 +4,24 @@ const seed = async () => {
   const gyms = [
     {
       name: 'The Gravity Vault - Hoboken, NJ',
-      state: 'New Jersey',
       imageUrl: '/img_GV.jpeg',
       mapUrl: '/HBKN_Route_Setting_Map_Completed_For_Website.png'
     },
     {
+      name: 'The Gravity Vault - Upper Saddle River, NJ',
+      imageUrl: '/img_USR.jpeg',
+      mapUrl: '/UPSR-Route_Setting.jpg'
+    },
+    {
       name: 'Brooklyn Boulders - Queensbridge, NY',
-      state: 'New York',
       imageUrl: '/img_BKBQB.jpg',
       mapUrl: '/qb-map.png'
     }
+    // {
+    //   name: 'Brooklyn Boulders - Gowanus, NY',
+    //   imageUrl: '/gowanus.jpg',
+    //   mapUrl: '/gowanus-map.png'
+    // }
   ];
 
   await Promise.all(gyms.map(gym => Gym.create(gym)));
