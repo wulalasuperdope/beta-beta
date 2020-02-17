@@ -26,20 +26,41 @@ class RoutePage extends React.Component {
     } = this.props.singleRoute;
 
     return (
-      <div className="single-route-page">
+      <div
+        className="single-route-page"
+        style={{
+          padding: '0.25rem',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
         <Link to={`/gyms/${gymId}`}>Back</Link>
-        <h3 className="route-name">
-          Grade: {grade}, Color: {holdColor}, Wall Location: {wallLocation}
-        </h3>
-        <img className="route-image" src={imageUrl} />
-        <ListGroup className="videos-list">
-          {videos.map(video => (
-            <ListGroup.Item key={video.id}>
-              <p>{video.name}</p>
-              <App videoUrl={video.videoUrl} />
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
+        <h4 className="route-name">
+          Grade: {grade}, Color: {holdColor}
+        </h4>
+        <div style={{ display: 'flex', width: '100%' }}>
+          <div style={{ width: '100%' }}>
+            <img
+              className="route-image"
+              src={imageUrl}
+              style={{ alignItems: 'center' }}
+            />
+          </div>
+          <div
+            style={{
+              width: '100%'
+            }}
+          >
+            <h5>Beta</h5>
+            <ListGroup className="videos-list">
+              {videos.map(video => (
+                <ListGroup.Item key={video.id}>
+                  <App videoUrl={video.videoUrl} />
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </div>
+        </div>
       </div>
     );
   }

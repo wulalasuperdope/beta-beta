@@ -4,7 +4,7 @@ const seed = async () => {
   const gyms = [
     {
       name: 'The Gravity Vault - Hoboken, NJ',
-      state:'New Jersey',
+      state: 'New Jersey',
       imageUrl: '/img_GV.jpeg',
       mapUrl: '/HBKN_Route_Setting_Map_Completed_For_Website.png'
     },
@@ -20,6 +20,7 @@ const seed = async () => {
 
   const routes = [
     {
+      id: 1,
       grade: 'V4',
       holdColor: 'Pink',
       wallLocation: 'Area D',
@@ -27,6 +28,7 @@ const seed = async () => {
       gymId: 1
     },
     {
+      id: 2,
       grade: 'V4',
       holdColor: 'White',
       wallLocation: 'Area E',
@@ -39,17 +41,14 @@ const seed = async () => {
 
   const videos = [
     {
-      name: 'beta #1',
       videoUrl: 'https://youtu.be/QfBoFX_XZwI',
       routeId: 1
     },
     {
-      name: 'beta #2',
       videoUrl: 'https://youtu.be/IMyeYNT-Oh4',
       routeId: 1
     },
     {
-      name: 'beta #1',
       videoUrl: 'https://youtu.be/GMAXPmIkeoU',
       routeId: 2
     }

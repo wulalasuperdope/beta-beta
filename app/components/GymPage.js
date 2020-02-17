@@ -15,12 +15,12 @@ class GymPage extends React.Component {
       return (
         <div className="single-gym-page" style={{padding:'0.25rem'}}>
           <h3 className="gym-name" >{name}</h3>
-          <div style={{display:'flex', 'flex-direction':'column'}}>
-            <div>
-              <img className="gym-map" src={mapUrl} style={{width:'500px', height:'1000px'}}/>
+          <div className='single-gym-container' style={{display:'flex', width:'100%'}}>
+            <div style={{width:'100%'}}>
+              <img className="gym-map" src={mapUrl} style={{width:'600px', height:'1000px'}}/>
             </div>
-            <div>
-              <p>This gym doesn't update any route here.</p>
+            <div style={{width:'100%'}}>
+              <p>Route information is not available.</p>
             </div>
           </div>          
         </div>
@@ -29,17 +29,24 @@ class GymPage extends React.Component {
       return (
         <div className="single-gym-page" style={{padding:'0.25rem'}}>
           <h3 className="gym-name">{name}</h3>
-          <img className="gym-map" src={mapUrl} style={{width:'500px', height:'1000px'}} />
+          <div className='single-gym-container' style={{display:'flex', width:'100%'}}>
+          <div style={{width:'100%'}}>
+            <img className="gym-map" src={mapUrl} style={{width:'600px', height:'1000px'}} />
+          </div>
+          <div style={{width:'100%'}}>
           <ListGroup className="routes-list">
             {routes.map(route => (
               <ListGroup.Item key={route.id}>
-                <Link to={`/gyms/${id}/${route.id}`}>
-                  Grade: {route.grade}, Color: {route.holdColor}, Wall Location:{' '}
-                  {route.wallLocation}
+                <Link to={`/gyms/${id}/${route.id}`} style={{display:'flex',justifyContent:'space-between'}}>
+                <div>Wall Location: {route.wallLocation}</div>
+                <div>Grade: {route.grade}</div>
+                <div>Color: {route.holdColor}</div>  
                 </Link>
               </ListGroup.Item>
             ))}
           </ListGroup>
+          </div>
+          </div>
         </div>
       );
     }

@@ -16,7 +16,6 @@ class App extends React.Component {
         <ReactPlayer
           url={videoUrl}
           playing
-          width="50%"
           light={true}
           controls={true}
           muted={true}
