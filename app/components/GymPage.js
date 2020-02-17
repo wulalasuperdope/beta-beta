@@ -13,39 +13,69 @@ class GymPage extends React.Component {
     const { id, name, mapUrl, routes } = this.props.singleGym;
     if (name && !routes.length) {
       return (
-        <div className="single-gym-page" style={{padding:'0.25rem'}}>
-          <h3 className="gym-name" >{name}</h3>
-          <div className='single-gym-container' style={{display:'flex', width:'100%'}}>
-            <div style={{width:'100%'}}>
-              <img className="gym-map" src={mapUrl} style={{width:'600px', height:'1000px'}}/>
+        <div
+          className="single-gym-page"
+          style={{ padding: '0.25rem', textAlign: 'center' }}
+        >
+          <h3 className="gym-name" style={{ padding: '20px' }}>
+            {name}
+          </h3>
+          <div
+            className="single-gym-container"
+            style={{ display: 'flex', width: '100%' }}
+          >
+            <div style={{ width: '100%' }}>
+              <img
+                className="gym-map"
+                src={mapUrl}
+                style={{ width: '600px', height: '1000px' }}
+              />
             </div>
-            <div style={{width:'100%'}}>
+            <div style={{ width: '100%' }}>
               <p>Route information is not available.</p>
             </div>
-          </div>          
+          </div>
         </div>
       );
     } else {
       return (
-        <div className="single-gym-page" style={{padding:'0.25rem'}}>
-          <h3 className="gym-name">{name}</h3>
-          <div className='single-gym-container' style={{display:'flex', width:'100%'}}>
-          <div style={{width:'100%'}}>
-            <img className="gym-map" src={mapUrl} style={{width:'600px', height:'1000px'}} />
-          </div>
-          <div style={{width:'100%'}}>
-          <ListGroup className="routes-list">
-            {routes.map(route => (
-              <ListGroup.Item key={route.id}>
-                <Link to={`/gyms/${id}/${route.id}`} style={{display:'flex',justifyContent:'space-between'}}>
-                <div>Wall Location: {route.wallLocation}</div>
-                <div>Grade: {route.grade}</div>
-                <div>Color: {route.holdColor}</div>  
-                </Link>
-              </ListGroup.Item>
-            ))}
-          </ListGroup>
-          </div>
+        <div
+          className="single-gym-page"
+          style={{ padding: '0.25rem', textAlign: 'center' }}
+        >
+          <h3 className="gym-name" style={{ padding: '20px' }}>
+            {name}
+          </h3>
+          <div
+            className="single-gym-container"
+            style={{ display: 'flex', width: '100%' }}
+          >
+            <div style={{ width: '100%' }}>
+              <img
+                className="gym-map"
+                src={mapUrl}
+                style={{ width: '600px', height: '1000px' }}
+              />
+            </div>
+            <div style={{ width: '100%' }}>
+              <ListGroup className="routes-list">
+                {routes.map(route => (
+                  <ListGroup.Item key={route.id}>
+                    <Link
+                      to={`/gyms/${id}/${route.id}`}
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between'
+                      }}
+                    >
+                      <div>Wall Location: {route.wallLocation}</div>
+                      <div>Grade: {route.grade}</div>
+                      <div>Color: {route.holdColor}</div>
+                    </Link>
+                  </ListGroup.Item>
+                ))}
+              </ListGroup>
+            </div>
           </div>
         </div>
       );

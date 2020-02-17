@@ -29,16 +29,16 @@ class RoutePage extends React.Component {
         className="single-route-page"
         style={{
           padding: '0.25rem',
-          justifyContent: 'center',
-          alignItems: 'center'
+          textAlign: 'center'
         }}
       >
         <Link to={`/gyms/${gymId}`}>Back</Link>
-        <h4 className="route-name">
+        <h4 className="route-name" style={{ padding: '20px' }}>
           Grade: {grade}, Color: {holdColor}
         </h4>
         <div style={{ display: 'flex', width: '100%' }}>
           <div style={{ width: '100%' }}>
+            <h5>Route</h5>
             <img className="route-image" src={imageUrl} />
           </div>
           <div
