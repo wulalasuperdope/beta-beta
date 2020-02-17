@@ -7,6 +7,9 @@ const Gym = db.define('gym', {
   name: {
     type: STRING
   },
+  state: {
+    type: STRING
+  },
   imageUrl: {
     type: STRING,
     defaultValue: 'No Image'

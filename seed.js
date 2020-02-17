@@ -4,11 +4,13 @@ const seed = async () => {
   const gyms = [
     {
       name: 'The Gravity Vault - Hoboken, NJ',
+      state:'New Jersey',
       imageUrl: '/img_GV.jpeg',
       mapUrl: '/HBKN_Route_Setting_Map_Completed_For_Website.png'
     },
     {
       name: 'Brooklyn Boulders - Queensbridge, NY',
+      state: 'New York',
       imageUrl: '/img_BKBQB.jpg',
       mapUrl: '/qb-map.png'
     }
