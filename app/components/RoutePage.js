@@ -39,11 +39,7 @@ class RoutePage extends React.Component {
         </h4>
         <div style={{ display: 'flex', width: '100%' }}>
           <div style={{ width: '100%' }}>
-            <img
-              className="route-image"
-              src={imageUrl}
-              style={{ alignItems: 'center' }}
-            />
+            <img className="route-image" src={imageUrl} />
           </div>
           <div
             style={{

@@ -17,11 +17,6 @@ const seed = async () => {
       imageUrl: '/img_BKBQB.jpg',
       mapUrl: '/qb-map.png'
     }
-    // {
-    //   name: 'Brooklyn Boulders - Gowanus, NY',
-    //   imageUrl: '/gowanus.jpg',
-    //   mapUrl: '/gowanus-map.png'
-    // }
   ];
 
   await Promise.all(gyms.map(gym => Gym.create(gym)));
